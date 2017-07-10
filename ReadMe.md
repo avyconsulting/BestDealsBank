@@ -14,7 +14,6 @@ Calculate - [Type] simple/compound
 [POST]
 <br/>
 http://localhost:7080/calculator-services/services/calculator?type=simple
-<br/>
 Input Json:
 ```
 {
@@ -23,11 +22,10 @@ Input Json:
   "rate": 3
 }
 ```
-<br/>
 [PUT]
 <br/>
 http://localhost:7080/calculator-services/services/deal/clients/1
-<br/>
+```
 [
    {
  	"principle": 2000,
@@ -40,7 +38,7 @@ http://localhost:7080/calculator-services/services/deal/clients/1
      "rate": 3
    }  
  ]
-<br/>
+```
 
 [GET]
 <br/>
