@@ -12,6 +12,7 @@ mvn clean install
 Calculate - [Type] simple/compound
 [POST]
 http://localhost:7080/calculator-services/services/calculator?type=simple
+
 Input Json:
 {
   "principle": 2000,
@@ -21,6 +22,7 @@ Input Json:
 
 [PUT]
 http://localhost:7080/calculator-services/services/deal/clients/1
+
 [
    {
  	"principle": 2000,
@@ -35,6 +37,7 @@ http://localhost:7080/calculator-services/services/deal/clients/1
  ]
 
 [GET]
+
 http://localhost:7080/calculator-services/services/deal/clients/1
 
 ## Contributing
