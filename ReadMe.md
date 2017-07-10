@@ -10,7 +10,9 @@ mvn clean install
 ## Usage
 
 Calculate - [Type] simple/compound
+
 [POST]
+
 http://localhost:7080/calculator-services/services/calculator?type=simple
 
 Input Json:
@@ -21,6 +23,7 @@ Input Json:
 }
 
 [PUT]
+
 http://localhost:7080/calculator-services/services/deal/clients/1
 
 [
@@ -51,7 +54,3 @@ TODO: Write history
 TODO: Write credits
 
 ## License
-
-
-
-
