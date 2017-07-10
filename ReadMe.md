@@ -16,13 +16,13 @@ Calculate - [Type] simple/compound
 http://localhost:7080/calculator-services/services/calculator?type=simple
 <br/>
 Input Json:
-'''json
+```
 {
   "principle": 2000,
   "noOfYears": 5,
   "rate": 3
 }
-'''
+```
 <br/>
 [PUT]
 <br/>
