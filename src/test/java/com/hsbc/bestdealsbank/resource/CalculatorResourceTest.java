@@ -1,6 +1,7 @@
 package com.hsbc.bestdealsbank.resource;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -204,10 +205,6 @@ public class CalculatorResourceTest {
     }
 
     private DealDetails getTestDealDetails() {
-        double principle = 2000;
-        double noOfYears = 5;
-        double rate = 3;
-        DealDetails dealDetails = new DealDetails(principle, noOfYears, rate);
-        return dealDetails;
+        return new DealDetails(BigDecimal.valueOf(2000), 5, BigDecimal.valueOf(3));
     }
 }

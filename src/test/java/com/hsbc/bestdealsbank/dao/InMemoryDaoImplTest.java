@@ -1,5 +1,6 @@
 package com.hsbc.bestdealsbank.dao;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,9 +83,9 @@ public class InMemoryDaoImplTest {
     private String saveTestData(InMemoryDaoImpl underTest) {
         String clientID = "client_1";
         List<DealDetails> deals = new ArrayList<>();
-        deals.add(new DealDetails(2000, 1, 2.5));
-        deals.add(new DealDetails(4000, 2, 3.5));
-        deals.add(new DealDetails(8000, 3, 4.5));
+        deals.add(new DealDetails(BigDecimal.valueOf(2000), 1, BigDecimal.valueOf(2.5)));
+        deals.add(new DealDetails(BigDecimal.valueOf(4000), 2, BigDecimal.valueOf(3.5)));
+        deals.add(new DealDetails(BigDecimal.valueOf(8000), 3, BigDecimal.valueOf(4.5)));
         
         underTest.putClientDeals(clientID, deals);
         return clientID;

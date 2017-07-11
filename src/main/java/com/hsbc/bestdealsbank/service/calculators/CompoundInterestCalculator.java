@@ -20,7 +20,7 @@ public class CompoundInterestCalculator implements InterestCalculator {
     @Override
     public CalculatorResponse calculate(DealDetails deals) {
 
-        double amount = deals.getPrinciple() * Math.pow(1.0 + deals.getRate() / 100.0, deals.getNoOfYears()) - deals.getPrinciple();
+        double amount = deals.getPrinciple().doubleValue() * Math.pow(1.0 + deals.getRate().doubleValue() / 100.0, deals.getNoOfYears()) - deals.getPrinciple().doubleValue();
         Double converted = decorator.convert(amount);
         
         return new CalculatorResponse(amount, converted);

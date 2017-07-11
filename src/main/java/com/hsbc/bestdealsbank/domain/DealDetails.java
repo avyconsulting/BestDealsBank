@@ -1,5 +1,6 @@
 package com.hsbc.bestdealsbank.domain;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -11,14 +12,14 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DealDetails {
 
-    private double principle;
-    private double noOfYears;
-    private double rate;
+    private BigDecimal principle;
+    private int noOfYears;
+    private BigDecimal rate;
 
     @JsonCreator
-    public DealDetails(@JsonProperty("principle") double principle,
-                    @JsonProperty("noOfYears") double noOfYears,
-                    @JsonProperty("rate") double rate) {
+    public DealDetails(@JsonProperty("principle") BigDecimal principle,
+                    @JsonProperty("noOfYears") int noOfYears,
+                    @JsonProperty("rate") BigDecimal rate) {
         this.principle = principle;
         this.noOfYears = noOfYears;
         this.rate = rate;
@@ -27,21 +28,21 @@ public class DealDetails {
     /**
      * @return the principle
      */
-    public double getPrinciple() {
+    public BigDecimal getPrinciple() {
         return this.principle;
     }
 
     /**
      * @return the noOfYears
      */
-    public double getNoOfYears() {
+    public int getNoOfYears() {
         return this.noOfYears;
     }
 
     /**
      * @return the rate
      */
-    public double getRate() {
+    public BigDecimal getRate() {
         return this.rate;
     }
 

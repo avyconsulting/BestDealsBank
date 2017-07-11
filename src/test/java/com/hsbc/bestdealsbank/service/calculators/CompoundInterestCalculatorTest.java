@@ -1,5 +1,7 @@
 package com.hsbc.bestdealsbank.service.calculators;
 
+import java.math.BigDecimal;
+
 import javax.inject.Inject;
 
 import org.jukito.JukitoRunner;
@@ -9,7 +11,6 @@ import org.junit.runner.RunWith;
 import com.hsbc.bestdealsbank.bootstrap.ApplicationModule;
 import com.hsbc.bestdealsbank.domain.CalculatorResponse;
 import com.hsbc.bestdealsbank.domain.DealDetails;
-import com.hsbc.bestdealsbank.service.calculators.CompoundInterestCalculator;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -31,10 +32,7 @@ public class CompoundInterestCalculatorTest {
     @Test
     public void shouldReturnFinalAmount() throws Exception {
 
-        double principle = 2000;
-        double noOfYears = 5;
-        double rate = 3;
-        DealDetails dealDetails = new DealDetails(principle, noOfYears, rate);
+        DealDetails dealDetails = new DealDetails(BigDecimal.valueOf(2000), 1, BigDecimal.valueOf(3));
 
         CalculatorResponse result = underTest.calculate(dealDetails);
 

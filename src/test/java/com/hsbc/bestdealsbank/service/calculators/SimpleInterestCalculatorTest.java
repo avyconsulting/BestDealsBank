@@ -1,5 +1,7 @@
 package com.hsbc.bestdealsbank.service.calculators;
 
+import java.math.BigDecimal;
+
 import javax.inject.Inject;
 
 import org.jukito.JukitoRunner;
@@ -31,10 +33,7 @@ public class SimpleInterestCalculatorTest {
     @Test
     public void shouldReturnCalculateRateInUsd() throws Exception {
 
-        double principle = 2000;
-        double noOfYears = 5;
-        double rate = 3;
-        DealDetails dealDetails = new DealDetails(principle, noOfYears, rate);
+        DealDetails dealDetails = new DealDetails(BigDecimal.valueOf(2000), 1, BigDecimal.valueOf(3));
 
         CalculatorResponse calculatorResponse = underTest.calculate(dealDetails);
 

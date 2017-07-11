@@ -20,7 +20,7 @@ public class SimpleInterestCalculator implements InterestCalculator {
     @Override
     public CalculatorResponse calculate(DealDetails dealDetails) {
 
-        double amount = dealDetails.getPrinciple() * dealDetails.getNoOfYears() * dealDetails.getRate() / 100;
+        double amount = dealDetails.getPrinciple().doubleValue() * dealDetails.getNoOfYears() * dealDetails.getRate().doubleValue() / 100;
         Double converted = decorator.convert(amount);
         
         return new CalculatorResponse(amount, converted);
